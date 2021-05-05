@@ -1,0 +1,29 @@
+body{
+    background-image: url(https://infobeans-design-system.web.app/images/login-bg.png);
+}
+header{
+    background-color:black
+}
+.headerText{
+    color:#d8d7d7 ;
+    font-weight: bold;
+}
+.menuIcon{
+    float: right
+}
+footer{
+    color:#d8d7d7;
+    text-align: center;
+}
+.bodyContent{
+    background-color: white;
+    height:100%;
+}
+.logo{
+    text-align: center;
+}
+.forgotPassword{
+    color: red; 
+    text-decoration: none;
+    margin-left: 175px;
+}
