@@ -63,9 +63,9 @@ function LoginPage() {
                     </div>
                 </div>
             </content>
-            <div class="" style={{ color: "white", textAlign: "center", marginTop: "70px", background: "transparent" }}>
+            <footer class="" >
                 &copy; Copyright 2020 InfoBeans. All Rights Reserved.
-    </div>
+    </footer>
         </div>
     )
 }
