@@ -1,4 +1,11 @@
+import { useHistory } from "react-router";
+
 function Navbar() {
+    let history=useHistory();
+    function logout(){
+        sessionStorage.removeItem("token");
+        history.push("/");
+    }
     return (
         <>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,6 +31,7 @@ function Navbar() {
                                 <a class="nav-link" href="#">Appalauds</a>
                                 <a class="nav-link" href="#">Gallery</a>
                                 <a class="nav-link" href="#">Jobs</a>
+                                <a class="nav-link" onClick={logout}>Logout</a>
                                 <a class="nav-link" href="#"><img src="menu1.png"></img></a>
                             </div>
                         </div>

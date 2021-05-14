@@ -10,14 +10,25 @@ function LoginPage() {
     if (sessionStorage.token) {
         history.push('/home')
     }
+
+    function ValidateEmail(mail) {
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value)) {
+            return (true)
+        }
+        alert("You have entered an invalid email address!")
+        return (false)
+    }
     function Login() {
         let email = document.getElementById("email").value;
-        let password = document.getElementById("password").value;
-        if (email == 'admin' && password == 'admin') {
-            sessionStorage.setItem("token", email);
-            history.push('/home')
+        if (ValidateEmail(email)) {
+            let password = document.getElementById("password").value;
+            if (email == 'admin' && password == 'admin') {
+                sessionStorage.setItem("token", email);
+                history.push('/home')
 
+            }
         }
+
     }
     return (
         <div className="loginContainer">
